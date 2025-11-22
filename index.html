@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://public-frontend-cos.metadl.com/mgx/img/favicon.png" type="image/png">
+    <title>CineMax - Descubra as Melhores Séries e Filmes</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1 class="logo">DarkFlix</h1>
+            <div class="search-container">
+                <input type="text" id="searchInput" class="search-input" placeholder="Buscar séries e filmes...">
+                <div class="search-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="heroBanner" class="hero-banner">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-info">
+                <h1 class="hero-title"></h1>
+                <div class="hero-meta">
+                    <span class="hero-rating"></span>
+                    <span class="hero-year"></span>
+                    <span class="hero-genres"></span>
+                </div>
+                <p class="hero-description"></p>
+                <div class="hero-buttons">
+                    <button class="hero-btn hero-btn-primary" onclick="playShow()">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                        Assistir
+                    </button>
+                    <button class="hero-btn hero-btn-secondary" onclick="showMoreInfo()">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="16" x2="12" y2="12"></line>
+                            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                        </svg>
+                        Mais Informações
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <div class="container">
+            <h2 class="section-title" id="sectionTitle">Séries e Filmes Populares</h2>
+            
+            <div id="loadingSpinner" class="loading">
+                <div class="spinner"></div>
+            </div>
+
+            <div id="moviesGrid" class="movies-grid"></div>
+
+            <div id="pagination" class="pagination"></div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 CineMax - Powered by TVMaze API</p>
+    </footer>
+
+    <script type="module" src="./script.js"></script>
+</body>
+
+</html>
